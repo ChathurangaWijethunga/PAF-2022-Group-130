@@ -10,4 +10,13 @@
   	<servlet-name>payHome</servlet-name>
   	<url-pattern>/paynow</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>gateway</servlet-name>
+  	<servlet-class>com.payment.co.PaymentGatewayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>gateway</servlet-name>
+  	<url-pattern>/paymentGateway</url-pattern>
+  </servlet-mapping>
 </web-app>

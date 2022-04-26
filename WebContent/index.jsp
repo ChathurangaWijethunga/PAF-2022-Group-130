@@ -8,16 +8,5 @@
 </head>
 <body>
 
-	<form method="post" action="paynow">
-		<input type="hidden" name="uid" value="002" />
-		<input type="submit" value="Pay now"/>
-	</form>
-	
-	<button onclick="window.location.href='pages/billingHome.jsp'" >
-  		Billing Manage
-	</button>
-
- 
-
 </body>
 </html>
