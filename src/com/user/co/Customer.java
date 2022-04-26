@@ -7,20 +7,22 @@ public class Customer {
 	   private String id;
 	   private String name;
 	   private String address;
-	   private String accountnumber;
+	   private int    accountnumber;
 	   private String NIC;
+	   private String email;
 	   private String type;
 	   private String username;
 	   private String password;
 	
-	   public Customer(String id, String name, String address, String accountnumber, String nIC, String type,
+	   public Customer(String id, String name, String address, int accountNumber2, String nIC,String email, String type,
 			String username, String password) {
 		   	   
 		this.id = id;
 		this.name = name;
 		this.address = address;
-		this.accountnumber = accountnumber;
+		this.accountnumber = accountNumber2;
 		NIC = nIC;
+		this.email = email;
 		this.type = type;
 		this.username = username;
 		this.password = password;
@@ -38,14 +40,16 @@ public class Customer {
 		return address;
 	}
 
-	public String getAccountnumber() {
+	public int getAccountnumber() {
 		return accountnumber;
 	}
 
 	public String getNIC() {
 		return NIC;
 	}
-
+	public String getemail() {
+		return email;
+	}
 	public String getType() {
 		return type;
 	}
