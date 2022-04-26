@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 align="center">Payment System</h1>
-	<form class="firstpform" aligne</form>="center">
+	<form class="firstpform" align="center">
 		<label class="flabel">Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&ensp;:
 			<input type="text" value="Chamod Ishankha" disabled />
 		</label>
