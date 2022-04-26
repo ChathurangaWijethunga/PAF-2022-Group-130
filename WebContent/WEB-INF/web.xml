@@ -21,4 +21,13 @@
     <url-pattern>/updatenotice</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+  	<servlet-name>payHome</servlet-name>
+  	<servlet-class>com.payment.co.ShowPaymentCusDetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>payHome</servlet-name>
+  	<url-pattern>/paynow</url-pattern>
+  </servlet-mapping>
 </web-app>

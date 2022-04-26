@@ -7,11 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<button onclick="window.location.href='pages/paymentHome.jsp'">
-  		Button 
-	</button>
+	
 	<button onclick="window.location.href='pages/notice.jsp'">
   		Notice Details
+</button>
+	<form method="post" action="paynow">
+		<input type="hidden" name="uid" value="002" />
+		<input type="submit" value="Pay now"/>
+	</form>
+	
+	<button onclick="window.location.href='pages/billingHome.jsp'" >
+  		Billing Manage
 	</button>
+
+ 
+
 </body>
 </html>
