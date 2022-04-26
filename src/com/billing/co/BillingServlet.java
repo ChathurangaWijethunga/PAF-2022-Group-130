@@ -1,6 +1,9 @@
 package com.billing.co;
 
 import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +21,23 @@ public class BillingServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		
+		// get user id using parameters bid
+				String currentUID = request.getParameter("bid");
+				
+				try {
+					List<Billing> billDetails = BillingDBUtil.validate(currentUID);
+					request.setAttribute("billDetails", billDetails);
+				System.out.println(billDetails);
+					
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				RequestDispatcher dispatch = request.getRequestDispatcher("pages/billingHome.jsp");
+				dispatch.forward(request, response); 
 	}
 
 }

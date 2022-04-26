@@ -1,1 +1,51 @@
 @charset "ISO-8859-1";
+
+.psys{
+	font-size: 50px;
+	font-style: oblique;
+	font-weight: 700;
+}
+
+.firstpform{
+	margin-top: 20px;
+	border: 1px solid black;
+	width: 1000px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.flabel{
+	font-size: 22px;
+}
+
+.fin {
+	font-size: 22px;
+	width: 400px;
+	padding: 10px;
+}
+
+.fcon {
+	padding: 10px;
+}
+
+.btnctrl {
+	margin-top: 25px;
+}
+
+.btn {
+	width: 200px;
+	height: 50px;
+}
+
+.ok {
+	margin-right: 10px
+}
+
+.psuccess{
+	text-align: center;
+	margin-top: 250px;
+	font-size: 100px;
+}

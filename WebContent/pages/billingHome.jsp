@@ -1,60 +1,79 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Billing Management</title>
+
+
+<style type="text/css">
+		body{
+			font-family: Hind SemiBold;
+		}
+	
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
 </head>
 
 
 <body>
-<div class="container-fluid">
 
-  <div class="row">
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 reducedCol well text-center">
-      <form action="#box" role="form" name="elecForm" class="form">
-        <fieldset class="form-group form-inline">
-
-          <label for="curr">Current Reading</label> <input class="form-control inp" name="curr" type="number" value="" placeholder="Units in kWh">
-
-          <label for="prev">Previous Reading</label> <input class="form-control inp" name="prev" type=" " value="" placeholder="Units in kWh">
-
-        </fieldset>
-
-        <fieldset class="form-group form-inline">
-          <label for="startDate">Start Date</label>
-          <input class="form-control inp" name="startDate" type="date">
-          <label for="endDate">End Date</label>
-          <input class="form-control inp" name="endDate" type="date">
-        </fieldset>
-
-        <fieldset class="form-group form-inline">
-          <label for="sancLoad">Sanctioned Load</label>
-          <select class="form-control inp" name="sancLoad">
-            <option>2 kW</option>
-            <option>>2-5 kW</option>
-          </select>
-        </fieldset>
-
-        <fieldset class="form-group">
-          <button class="btn bg-primary getButton" type="button" onClick="calcBill(this.form)">Get Bill</button>
-        </fieldset>
-      </form>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
-      <div class="box text-responsive" id="#box">
-        <center>
-          <h2>Bill : </h2><span class="change" id="change"></span></center>
-      </div>
-    </div>
-
-  </div>
+  <table>
+  <h1 class="psys" align="center">Billing List</h1>
+	<c:forEach var="cus" items="${billDetails}">
+		
+		${cus.userID}
+		${cus.name}      
+		${cus.startDate}
+		${cus.endDate}
+		${cus.accountNumber}
+		${cus.billNumber}
+		${cus.noofUnit}
+		${cus.billAmount}
 
 
-</div>
+	<tr>
+		<td>Customer ID :</td>
+		<td>${cus.userID}</td>
+	</tr>
+	<tr>
+		<td>Customer Name :</td>
+		<td>${cus.name}</td>
+	</tr>
+	<tr>
+		<td> Start Date :</td>
+		<td>${cus.startDate}</td>
+	</tr>
+	<tr>
+		<td>End Date :</td>
+		<td>${cus.endDate}</td>
+	</tr>
+	<tr>
+		<td>Account Number :</td>
+		<td>${cus.accountNumber}</td>
+	</tr>
+		
+		<tr>
+		<td>Bill Number :</td>
+		<td>${cus.billNumber}</td>
+	</tr>
+	<tr>
+		<td>Number Of Units :</td>
+		<td>${cus.noofUnit}</td>
+	</tr>
+	<tr>
+		<td>Bill Amount :</td>
+		<td>${cus.billAmount}</td>
+	</tr>
+	
+	</c:forEach>
+</table>
+
+	
 
 
 </body>

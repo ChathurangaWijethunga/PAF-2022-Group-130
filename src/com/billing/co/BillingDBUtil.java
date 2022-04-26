@@ -11,7 +11,7 @@ public class BillingDBUtil {
 	
 	//for validate
 	
-	public static List<Billing> validate(String userid, int accountNumber) {
+	public static List<Billing> validate(String userid) {
 		
 		ArrayList<Billing> bil = new ArrayList<>();
 		
@@ -26,11 +26,11 @@ public class BillingDBUtil {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, uname, pass);
 			Statement stmt = con.createStatement();
-			String sql = "select * from billing where UserID='"+userid+"' and AccountNumber='"+accountNumber+"'";
+			String sql = "select * from billing where BillNumber='"+userid+"'";
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			if(rs.next()) {
-				String Uid = rs.getString(1);
+				String uid = rs.getString(1);
 				String Bname = rs.getString(2);
 				String Sdate =rs.getString(3);
 				String Edate =rs.getString(4);
@@ -39,7 +39,7 @@ public class BillingDBUtil {
 				int Nounit =rs.getInt(7);
 				float Biamount =rs.getFloat(8);
 				
-				Billing c = new Billing(Uid,Bname,Sdate,Edate,Anumber,Bnumber,Nounit,Biamount);
+				Billing c = new Billing(uid,Bname,Sdate,Edate,Anumber,Bnumber,Nounit,Biamount);
 				bil.add(c);
 			}
 		}
