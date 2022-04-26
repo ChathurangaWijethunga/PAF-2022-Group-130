@@ -1,18 +1,32 @@
 package com.notice.co;
 
+import java.util.ArrayList;
+
 public class Notice {
+	private int id;
 	private String userID;
 	private String userName;
 	private String date;
 	private String time;
 	private String type;
+	private String notice;
 	
-	public Notice(String userID, String userName, String date, String time, String type) {
+	public Notice(int id, String userID, String userName, String date, String time, String type, String notice) {
+		this.id = id;
 		this.userID = userID;
 		this.userName = userName;
 		this.date = date;
 		this.time = time;
 		this.type = type;
+		this.notice = notice;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getUserID() {
@@ -54,6 +68,15 @@ public class Notice {
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	public String getNotice() {
+		return notice;
+	}
+
+	public void setNotice(String notice) {
+		this.notice = notice;
+	}
+
 	
 	
 	

@@ -1,6 +1,7 @@
 package com.notice.co;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/NoticeServlet")
-public class NoticeServlet extends HttpServlet {
+@WebServlet("/UpdateNoticeServlet")
+public class UpdateNoticeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
 		String id = request.getParameter("id");
 		String userid = request.getParameter("userid");
 		String name = request.getParameter("name");
@@ -27,16 +28,23 @@ public class NoticeServlet extends HttpServlet {
 		
 		boolean isTrue;
 		
-		isTrue = NoticeDBUtil.insertNotice(id,userid, name, date, time, type, notice);
+		isTrue = NoticeDBUtil.updateNotice(id, userid, name, date, time, type, notice);
 		
 		if(isTrue == true) {
+			
+			List<Notice> noticeDetails = NoticeDBUtil.getNoiceDetails(id);
+			request.setAttribute("userNotices",noticeDetails );
+			
 			RequestDispatcher dis = request.getRequestDispatcher("pages/userNotice.jsp");
 			dis.forward(request, response);
+			
 		} else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("pages/unsuccess.jsp");
+			List<Notice> noticeDetails = NoticeDBUtil.getNoiceDetails(id);
+			request.setAttribute("userNotices",noticeDetails );
+			
+			RequestDispatcher dis2 = request.getRequestDispatcher("pages/userNotice.jsp");
 			dis2.forward(request, response);
 		}
-			
-		}
+	}
 
 }

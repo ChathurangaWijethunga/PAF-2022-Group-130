@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<button onclick="window.location.href='pages/paymentHome.jsp'">
-  		Button 
-	</button>
-	<button onclick="window.location.href='pages/notice.jsp'">
-  		Notice Details
-	</button>
+
+<h1> Unsuccess! </h1>
 </body>
 </html>
