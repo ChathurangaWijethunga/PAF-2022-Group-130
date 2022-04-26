@@ -8,11 +8,8 @@
 </head>
 <body>
 
-	<form method="post" action="paynow">
-		<input type="hidden" name="uid" value="002" />
-		<input type="submit" value="Pay now"/>
-	</form>
 	
+<<<<<<< HEAD
 	
 	
 	<form method="post" action="billing">
@@ -21,7 +18,22 @@
 	</form>
 	
 	
+=======
+	 <div class="logcenter" align="center">
+   <h1 >LOGIN</h1>
+   <form  action="login" method="post">
+       User Name: <input type="text" name="username" placeholder=" Enter Your username"><br></br>
+       Password: <input type="password" name="password" placeholder=" Enter Your password"><br><br>
+       <input type="submit" name="submit" value="Login">
+   </form>
+   </div>
+	
+	
+	
+ <button onclick="window.location.href='pages/SignUp.jsp'">
+  		Sign Up
+	</button>
+>>>>>>> branch 'main' of https://github.com/ChathurangaWijethunga/PAF-2022-Group-130.git
  
-
 </body>
 </html>

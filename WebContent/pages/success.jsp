@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="layout/css/payment.css" rel="stylesheet" type="text/css" />
 <meta charset="ISO-8859-1">
-<title>Payment</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1 class="psuccess">Payment Successful<br/>
-		Thank you!	
-	</h1>
+  <h1> Notice send and save Successfully! </h1>
+  <button onclick="window.location.href='pages/userNotice.jsp'">
+  		Notices Details
+	</button>
 </body>
 </html>

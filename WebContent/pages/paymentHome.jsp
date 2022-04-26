@@ -18,7 +18,7 @@
 <!-- Customer details from servlet -->
 	<h1 class="psys" align="center">Payment System</h1>
 	<c:forEach var="cusD" items="${customerDetails}">
-		<form class="firstpform">
+		<form action="paynow" method="post" class="firstpform">
 			<div class="fcon">
 				<label class="flabel">Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&ensp;:
 					<input class="fin" type="text" value="${cusD.name}" disabled />
@@ -54,13 +54,10 @@
 					<input class="fin" type="text" value="${totalPayable}0" disabled />
 				</label>
 			</div>
-			<div class="fcon">
-				<label class="flabel">Amount&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:
-					<input class="fin" type="text" placeholder="${totalPayable}0" />
-				</label>
-			</div>
 			<div class="btnctrl">
-				<input class="btn ok" type="button" value="PROCEED" onclick="window.location.href='paymentSuccess.jsp'" />
+				<input type="hidden" name="page" value="afterProceed" />
+				<input type="hidden" name="uid" value="${cusD.userID}" />
+				<input class="btn ok" type="submit" value="PROCEED" />
 				<input class="btn cancel" type="button" value="CANCEL" onclick="window.location.href='../index.jsp'" />
 			</div>
 		</form>
