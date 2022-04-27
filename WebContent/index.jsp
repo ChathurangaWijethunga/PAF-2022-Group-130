@@ -9,6 +9,16 @@
 <body>
 
 	
+<<<<<<< HEAD
+	
+	
+	<form method="post" action="billing">
+		<input type="hidden" name="bid" value="20012" />
+		<input type="submit" value="Billing List"/>
+	</form>
+	
+	
+=======
 	 <div class="logcenter" align="center">
    <h1 >LOGIN</h1>
    <form  action="login" method="post">
@@ -21,6 +31,7 @@
  <button onclick="window.location.href='pages/SignUp.jsp'">
   		Sign Up
 	</button>
+>>>>>>> branch 'main' of https://github.com/ChathurangaWijethunga/PAF-2022-Group-130.git
  
 </body>
 </html>

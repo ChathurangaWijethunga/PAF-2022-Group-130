@@ -14,14 +14,14 @@ public class CustomerBill {
 	public CustomerBill(String userID, String name, String startDate, String endDate, int accountNumber, int billNumber,
 			int noofUnit, double billAmount) {
 		super();
-		UserID = userID;
-		Name = name;
-		StartDate = startDate;
-		EndDate = endDate;
-		AccountNumber = accountNumber;
-		BillNumber = billNumber;
-		NoofUnit = noofUnit;
-		BillAmount = billAmount;
+this.UserID = userID;
+this.Name = name;
+this.StartDate = startDate;
+this.EndDate = endDate;
+this.AccountNumber = accountNumber;
+this.BillNumber = billNumber;
+this.NoofUnit = noofUnit;
+this.BillAmount = billAmount;
 	}
 
 	public String getUserID() {

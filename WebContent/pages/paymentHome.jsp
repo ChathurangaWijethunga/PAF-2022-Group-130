@@ -9,7 +9,7 @@
 <title>Payment</title>
 </head>
 <body>
-
+	
 <!-- Bill details form servlet -->
 	<c:forEach var="cd" items="${customerBillDetails}">
 		<c:set var="totalPayable" value="${cd.billAmount}" />

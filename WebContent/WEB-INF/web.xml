@@ -23,12 +23,14 @@
   
   
   <servlet>
-  	<servlet-name>payHome</servlet-name>
-  	<servlet-class>com.payment.co.ShowPaymentCusDetailsServlet</servlet-class>
+  	<servlet-name>billHome</servlet-name>
+  	<servlet-class>com.billing.co.BillingServlet</servlet-class>
+  
   </servlet>
+  
   <servlet-mapping>
-  	<servlet-name>payHome</servlet-name>
-  	<url-pattern>/paynow</url-pattern>
+  	<servlet-name>billHome</servlet-name>
+  	<url-pattern>/billing</url-pattern>
   </servlet-mapping>
   
   <servlet>
