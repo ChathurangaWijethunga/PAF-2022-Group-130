@@ -1,6 +1,7 @@
 package com.user.co;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,18 +22,28 @@ public class CustomerInsertServlet extends HttpServlet {
 		String accountnumber= request.getParameter("accountnumber");
 		String NIC = request.getParameter("nic");
 		String Email = request.getParameter("email");
+		String Phone = request.getParameter("phone");
 		String Type = request.getParameter("type");
 		String Username = request.getParameter("username");
 		String Password = request.getParameter("passU");
 		
+		System.out.println(name);
+		System.out.println(address);
+		System.out.println(accountnumber);
+		System.out.println(NIC);
+		System.out.println(Email);
+		System.out.println(Type);
+		System.out.println(Username);
+		System.out.println(Password);
+		
 		boolean isTrue;
 		
-	isTrue = CustomerDBUtil.insertcustomer(name, address, accountnumber, NIC, Email,Type, Username, Password);
+		isTrue = CustomerDBUtil.insertcustomer(name, address, accountnumber, NIC, Email, Phone,Type, Username, Password);
 		if(isTrue == true){
-		      RequestDispatcher dis = request.getRequestDispatcher("pages/userDetails.jsp");
+		      RequestDispatcher dis = request.getRequestDispatcher("index.jsp");
 		      dis.forward(request, response);
 		} else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("pages/SignUp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("pages/SignUp.jsp");
 			dis2.forward(request,response);
 		}
 	}

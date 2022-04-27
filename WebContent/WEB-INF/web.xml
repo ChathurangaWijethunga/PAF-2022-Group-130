@@ -39,4 +39,23 @@
   	<servlet-name>gateway</servlet-name>
   	<url-pattern>/paymentGateway</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>loginpage</servlet-name>
+  	<servlet-class>com.user.co.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginpage</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>insertpage</servlet-name>
+  	<servlet-class>com.user.co.CustomerInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>insertpage</servlet-name>
+  	<url-pattern>/insertp</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

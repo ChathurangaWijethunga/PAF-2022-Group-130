@@ -9,27 +9,27 @@
 <body>
  <h1 align="center">Registration Form</h1>
  
-   <form action="insert" method="post" align="center">
-  
-		
-  <label for="fname">Name:</label>
-  <input type="text" id="fname" name="name"><br><br>
-  <label for="lname">Address:</label>
-  <input type="text" id="lname" name="address" form="form1"><br><br>
-  <label for="lname">AccountNumber:</label>
-  <input type="text" id="lname" name="accountnumber" form="form1"><br><br>
-  <label for="lname">NIC:</label>
-  <input type="text" id="lname" name="nic" form="form1"><br><br>
-  <label for="lname">Email:</label>
-  <input type="text" id="lname" name="email" form="form1"><br><br>
-  <label for="lname">Type:</label>
-  <input type="text" id="lname" name="type" form="form1"><br><br>
-  <label for="lname">UserName:</label>
-  <input type="text" id="lname" name="username" form="form1"><br><br>
-  <label for="lname">Password:</label>
-  <input type="text" id="lname" name="passU" form="form1"><br><br>
-  <input type="submit" name="save" value="insert">
-</form>
+   <form action="../insertp" method="post" align="center">	
+	  <label for="name">Name:</label>
+	  <input type="text" name="name"><br><br>
+	  <label for="address">Address:</label>
+	  <input type="text" name="address"><br><br>
+	  <label for="accountnumber">AccountNumber:</label>
+	  <input type="text" name="accountnumber"><br><br>
+	  <label for="nic">NIC:</label>
+	  <input type="text" name="nic"><br><br>
+	  <label for="email">Email:</label>
+	  <input type="text" name="email"><br><br>
+	  <label for="phone">Phone:</label>
+	  <input type="text" name="phone"><br><br>
+	  <label for="type">Type:</label>
+	  <input type="text" name="type"><br><br>
+	  <label for="username">UserName:</label>
+	  <input type="text" name="username"><br><br>
+	  <label for="passU">Password:</label>
+	  <input type="text" name="passU"><br><br>
+	  <input type="submit" value="Insert">
+	</form>
  
 
 </body>

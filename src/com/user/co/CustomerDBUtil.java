@@ -51,7 +51,7 @@ private static ResultSet  rs =null;
 		
 	}
 	
-public static boolean insertcustomer(String name, String address, String accountnumber,String nic,String email,  String username, String passU, String password) {
+public static boolean insertcustomer(String name, String address, String accountnumber,String nic,String email,String phone,String type, String username, String password) {
     	
     	boolean isSuccess = false;
     	
@@ -60,7 +60,7 @@ public static boolean insertcustomer(String name, String address, String account
     	
     		con = DBConnect.getConnection();
     		stmt = con.createStatement();
-    	    String sql = "insert into customer values (0,'"+name+"','"+address+"','"+accountnumber+"','"+nic+"','"+username+"','"+passU+"')";
+    	    String sql = "insert into customer values (1,'"+name+"','"+address+"','"+accountnumber+"','"+nic+"','"+email+"','"+phone+"','"+type+"','"+username+"','"+password+"')";
     		int rs = stmt.executeUpdate(sql);
     		
     		if(rs > 0) {

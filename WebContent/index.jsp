@@ -17,9 +17,7 @@
        <input type="submit" name="submit" value="Login">
    </form>
    </div>
-	
-	
-	
+   
  <button onclick="window.location.href='pages/SignUp.jsp'">
   		Sign Up
 	</button>
